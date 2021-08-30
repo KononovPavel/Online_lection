@@ -1,0 +1,7 @@
+<h1 class="text-center">Добавление новой лекции</h1>
+<form (submit)="onSubmit()" class="mt-4 w-50 mx-auto">
+	<input type="text" [(ngModel)]="title" name="title" placeholder="Название " class="form-control"><br>
+	<textarea [(ngModel)]="anons" name="anons" placeholder="Тема" class="form-control"></textarea><br>
+	<textarea type="text" [(ngModel)]="text" name="text" placeholder="Текст" class="form-control"></textarea><br>
+	<button class="btn btn-success" type="submit">Добавить статью</button>
+</form>

@@ -1,0 +1,13 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id="header">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Online Lection</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" [routerLink]="['/']">Главная</a>
+      <a *ngIf="authService.isLoggedIn()" class="p-2 text-dark" [routerLink]="['/contacts']">Добавить отзыв</a>
+      <a *ngIf="authService.isLoggedIn()" class="p-2 text-dark"[routerLink]="['/libruary']">Библиотека</a>
+      <a *ngIf="authService.isLoggedIn()"  class="p-2 text-dark" [routerLink]="['/translations']">Онлайн трансляции</a>
+      <a *ngIf="authService.isLoggedIn()"  class="p-2 text-dark" [routerLink]="['/tests/create']">Создать тест</a>
+    </nav>
+    <a *ngIf="authService.isLoggedIn()" class="btn btn-outline-warning" [routerLink]="['/dashboard']">Кабинет Пользователя</a>
+    <a *ngIf="!authService.isLoggedIn()" class="btn btn-outline-primary" [routerLink]="['/registration']">Регистрация</a>
+    <a *ngIf="!authService.isLoggedIn()"  class="btn btn-outline-primary" [routerLink]="['/authorization']" >Войти</a>
+  </div>

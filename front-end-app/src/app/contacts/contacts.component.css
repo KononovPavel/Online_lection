@@ -1,0 +1,8 @@
+.jumbotron{
+    background:linear-gradient(135deg,red,blue);
+    color: white;
+}
+form{
+    padding-top: 50px;
+}
+
